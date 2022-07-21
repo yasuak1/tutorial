@@ -14,7 +14,7 @@ def disp_acc(result, metrics):
         plt_test = result.history['val_' + metric]
 
         plt.subplot(1, 2, i+1)
-        plt.title(metrics)
+        plt.title(metric)
         plt.plot(plt_train, label='training')
         plt.plot(plt_test, label='test')
         plt.legend()
