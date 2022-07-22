@@ -10,3 +10,90 @@ Processing by ApplicationController#hello as HTML
 Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 2462)
 
 
+Started GET "/home" for 127.0.0.1 at 2022-07-22 13:18:53 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for 127.0.0.1 at 2022-07-22 13:19:15 +0900
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 14)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1996)
+
+
+Started GET "/static_page/home" for 127.0.0.1 at 2022-07-22 13:19:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/static_page/home"):
+  
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-07-22 13:19:35 +0900
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 148)
+  Rendered layout layouts/application.html.erb (Duration: 192.2ms | Allocations: 86427)
+Completed 200 OK in 195ms (Views: 194.2ms | ActiveRecord: 0.0ms | Allocations: 87367)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-07-22 13:21:45 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 355)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 34987)
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.0ms | Allocations: 38383)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-07-22 13:22:39 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 358)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 35094)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.0ms | Allocations: 38490)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-07-22 13:35:07 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 359)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 35617)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 39013)
+
+
+Started GET "/static_pages/css/style.css" for 127.0.0.1 at 2022-07-22 13:35:07 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/css/style.css"):
+  
+Started GET "/static_pages/home" for 127.0.0.1 at 2022-07-22 13:35:52 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 355)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 35623)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 39019)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-07-22 13:35:57 +0900
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2748)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3158)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2022-07-22 13:37:39 +0900
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2431)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 2701)
+
+
