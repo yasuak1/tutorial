@@ -88,7 +88,7 @@ def main():
 
     # l2
     l2_model = keras.models.Sequential([
-        keras.layers.Dense(16, kernel_regularizer=keras.regularizers.l2(0.001), activation='relu', input_shape(NUM_WORDS,),
+        keras.layers.Dense(16, kernel_regularizer=keras.regularizers.l2(0.001), activation='relu', input_shape=(NUM_WORDS,)),
         keras.layers.Dense(16, kernel_regularizer=keras.regularizers.l2(0.001), activation='relu'),
         keras.layers.Dense(1, activation='sigmoid')
     ])
