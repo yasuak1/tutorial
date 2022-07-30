@@ -86,6 +86,26 @@ def main():
         verbose=2
     )
 
+    # l2
+    l2_model = keras.models.Sequential([
+        keras.layers.Dense(16, kernel_regularizer=keras.regularizers.l2(0.001), activation='relu', input_shape(NUM_WORDS,),
+        keras.layers.Dense(16, kernel_regularizer=keras.regularizers.l2(0.001), activation='relu'),
+        keras.layers.Dense(1, activation='sigmoid')
+    ])
+    l2_model.compile(
+        optimizer='adam',
+        loss='binary_crossentropy', 
+        metrics=['accuracy', 'binary_crossentropy']
+    )
+    l2_model.summary()
+
+    l2_model_history = l2_model.fit(
+        train_data, train_labels,
+        batch_size=512,
+        validation_data=(test_data, test_labels),
+        verbose=2
+    )
+
     def plot_history(histories, key='binary_crossentropy'):
         plt.figure(figsize=(16,10))
 
@@ -104,7 +124,8 @@ def main():
     plot_history([
         ('baseline', baseline_history),
         ('smaller', smaller_history),
-        ('bigger', bigger_history)
+        ('bigger', bigger_history),
+        ('l2_model', l2_model_history)
     ])
 
 
