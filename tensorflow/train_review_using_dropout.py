@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 import matplotlib.pylab as plt
-from disp import plot_history
+from disp import plot_history, disp_acc
 
 def main():
     NUM_WORDS = 10000
@@ -65,6 +65,8 @@ def main():
         ('baseline', baseline_history),
         ('dropout', dpt_model_history)
     ])
+    metrics = ['loss', 'accuracy']
+    disp_acc(result=dpt_model_history, metrics=metrics)
 
 
 if __name__ == '__main__':
