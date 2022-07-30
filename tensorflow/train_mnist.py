@@ -3,7 +3,7 @@ sys.path.append(os.pardir)
 from calendar import EPOCH
 import tensorflow as tf
 import matplotlib.pylab as plt
-from disp_acc import disp
+from disp import disp_acc
 
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
  
@@ -23,7 +23,7 @@ model.compile(
   loss='sparse_categorical_crossentropy',
   metrics=['accuracy']
 )
-result = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=20)
+result = model.fit(x_train, y_train, validation_data=(x_test, y_test), epochs=5)
 metrics = ['loss', 'accuracy']
 
-disp(result, metrics)
+disp_acc(result, metrics)
