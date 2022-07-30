@@ -99,6 +99,7 @@ def main():
         plt.legend()
 
         plt.xlim([0,max(history.epoch)])
+        plt.show()
         
     plot_history([
         ('baseline', baseline_history),
