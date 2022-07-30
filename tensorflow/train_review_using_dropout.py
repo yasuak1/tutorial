@@ -2,6 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 import numpy as np
 import matplotlib.pylab as plt
+from disp import plot_history
 
 def main():
     NUM_WORDS = 10000
@@ -59,6 +60,12 @@ def main():
         validation_data=(test_data, test_labels),
         verbose=2
     )
+
+    plot_history([
+        ('baseline', baseline_history),
+        ('dropout', dpt_model_history)
+    ])
+
 
 if __name__ == '__main__':
     main()
